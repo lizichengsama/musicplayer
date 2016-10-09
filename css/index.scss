@@ -1,0 +1,289 @@
+body, p, ul, li, input {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@import "mixins";
+body {
+  background-image: url('../images/jiaoxiangyue.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.play-box {
+  width: 100%;
+  height: 618px;
+  margin: 0 auto;
+  .pleft {
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: rgba(250, 250, 250, 0.5);
+    .rolling {
+      height: 70%;
+      .music-box {
+        width: 90%;
+        //height:500px;
+        border-top: 1px solid #000;
+        margin: auto;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 40px;
+        .xia {
+          width: 20px;
+          height: 20px;
+          background-image: url(../images/plus.png);
+          background-repeat: no-repeat;
+          background-size: 20px;
+          background-position: center center;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        ul {
+          display: block;
+          width: 90%;
+          margin: 0 auto;
+          display: none;
+          li {
+            cursor: pointer;
+            margin-top: 10px;
+            border-bottom: 1px solid #0b3b8c;
+            &:hover {
+              background: rgba(0, 0, 0, 0.7);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .playing {
+      width: 100%;
+      height: 30%;
+      position: absolute;
+      bottom: 0;
+      span {
+        display: inline-block;
+        margin-top: 5px;
+      }
+      .names {
+        width: 80%;
+        margin: 5px 10%;
+      }
+      .geshou {
+        width: 80%;
+        margin: 5px 10%;
+      }
+    }
+  }
+  .pright {
+    width: 80%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    .lyrics{
+      width:60%;
+      height:100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin:auto;
+      span{
+        color:#fff;
+        position: absolute;
+        bottom:50%;
+        left: 50%;
+        margin-left: -100px;
+
+      }
+    }
+  }
+}
+
+.audio {
+  width: 100%;
+  height: 8%;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  .start-pause {
+    width: 50px;
+    height: 50px;
+    margin-left: 70px;
+    float: left;
+    background-image: url(../images/play.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center center;
+  }
+  .start-pause.pauses {
+    background-image: url(../images/pause.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center center;
+  }
+  .pre-next {
+    width: 70px;
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+    .pre-music {
+      width: 30px;
+      height: 100%;
+      background-image: url(../images/pre-music.png);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: center center;
+      float: left;
+    }
+    .next-music {
+      width: 30px;
+      height: 100%;
+      background-image: url(../images/next-music.png);
+      background-repeat: no-repeat;
+      background-size: 45px;
+      background-position: center center;
+      float: right;
+    }
+  }
+  .times {
+    width: 100px;
+    height: 30px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 40px;
+    span {
+      font-size: 12px;
+    }
+  }
+  .jindutiao {
+    width: 250px;
+    height: 20px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 110px;
+    position: relative;
+    .tiao {
+      width: 100%;
+      height: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+    .dian {
+      @include yuanxing(10px);
+      background: #000;
+      position: absolute;
+      top: 0;
+    }
+  }
+  .voices {
+    width: 200px;
+    height: 10px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 60px;
+    position: relative;
+    .clicks {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/yinliang.png);
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: center center;
+      float: left;
+    }
+    .clicks.jingyin {
+      background-image: url(../images/jingyin.png);
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: center center;
+    }
+    .tiaos {
+      width: 180px;
+      height: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      float: right;
+      margin-top: 5px;
+    }
+    .yuandian {
+      @include yuanxing(10px);
+      background: #000;
+      position: absolute;
+      top: 0;
+      margin-top: 5px;
+    }
+  }
+}
+.playMode {
+  float: left;
+  margin-left:50px;
+
+  .ordered {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/ordered.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .musicRandom {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/musicRandom.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    background-size: 35px;
+    //position: absolute;
+    cursor: pointer;
+    margin-left: 10px;
+    //display: none;
+  }
+  .cycleSingle {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/cycleSingle.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    background-size: 35px;
+    //position: absolute;
+    cursor: pointer;
+    margin-left: 10px;
+    //display: none;
+  }
+  .cycleList {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/cyclelists.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    //position: absolute;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+    //display: none;
+  }
+  .active{
+    border:1px solid black;
+  }
+}
+
+

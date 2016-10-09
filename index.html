@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<audio src="music/交响乐.mp3" id="audio"></audio>
+
+<div class="play-box">
+    <div class="pleft">
+        <div class="rolling">
+            <div class="music-box">
+                <div class="xia"></div>
+                <ul class="lists">
+
+                </ul>
+            </div>
+        </div>
+        <div class="playing">
+            <span>正在播放:</span><br>
+            <span class="names">交响乐</span><br>
+            歌手:<span class="geshou">交响乐团</span>
+        </div>
+    </div>
+    <div class="pright">
+        <div class="lyrics">
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<div class="audio">
+    <div class="start-pause">
+
+    </div>
+    <div class="pre-next">
+        <div class="pre-music"></div>
+        <div class="next-music"></div>
+    </div>
+    <div class="jindutiao">
+        <div class="tiao">
+
+        </div>
+        <div class="dian">
+
+        </div>
+    </div>
+    <div class="times">
+        <span class="run-time">00:00</span>
+        <span>/</span>
+        <span class="totle-time">00:00</span>
+    </div>
+    <div class="voices">
+        <div class="clicks">
+
+        </div>
+        <div class="tiaos">
+
+        </div>
+        <div class="yuandian">
+
+        </div>
+    </div>
+    <div class="playMode">
+        <div title="顺序循环" class="ordered"></div>
+        <div title="随机播放"  class="musicRandom"></div>
+        <div title="单曲循环"  class="cycleSingle"></div>
+        <div title="列表循环"  class="cycleList"></div>
+    </div>
+</div>
+</body>
+</html>
